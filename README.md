@@ -6,7 +6,7 @@ StuGPT is a reference AI system that models a student's evolving learning state 
 
 ## Why this design
 
-The implementation is organized around three requirements:
+The implementation is organised around three requirements:
 
 1. **Track learning interactions over time** with structured event data.
 2. **Generate recommendations that are explainable** (with explicit evidence + rule triggers).
@@ -75,6 +75,22 @@ Built-in guidance types:
 - `src/stugpt/demo.py` — simulation/demo script.
 - `tests/test_learning_model.py` — regression tests for core adaptation and guidance behavior.
 
+## Dependencies
+
+- Python **3.10** or later
+- No third-party runtime dependencies — standard library only
+- `pytest >= 7.4` for running the test suite
+
+## Setup
+
+```bash
+python -m venv .venv
+source .venv/bin/activate      # macOS / Linux
+.venv\Scripts\activate         # Windows
+
+pip install -e ".[dev]"
+```
+
 ## Run locally
 
 ```bash
@@ -84,7 +100,7 @@ PYTHONPATH=src pytest -q
 
 ## How this can be used in a product
 
-- **Student dashboard**: topic health + prioritized “next best action” cards.
-- **Tutor bot**: explain “why this recommendation” using evidence/rule fields.
+- **Student dashboard**: topic health + prioritized "next best action" cards.
+- **Tutor bot**: explain "why this recommendation" using evidence/rule fields.
 - **Intervention agent**: trigger proactive nudges for inactivity or plateau risk.
 - **Instructor console**: monitor cohort-level struggle/acceleration patterns.
