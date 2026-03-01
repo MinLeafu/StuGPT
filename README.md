@@ -1,0 +1,2 @@
+# StuGPT
+Student GPT
